@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Ahmed Elkady
+ORG:MedYour
+TITLE:CEO
+TEL;TYPE=WORK,VOICE:+20 105 500 7500
+TEL;TYPE=CELL,VOICE:+20 105 600 7500
+EMAIL;TYPE=INTERNET:ak@medyour.com
+URL:https://www.medyour.com
+item1.URL;type=pref:https://www.instagram.com/medyouregypt/
+item2.URL;type=pref:https://www.facebook.com/profile.php?id=61576602431934
+item3.URL;type=pref:https://www.linkedin.com/company/medyouregypt/
+item4.URL;type=pref:https://x.com/medyouregypt
+ADR;TYPE=WORK:;;26 El Nasr Axis, New Cairo;Cairo;;Egypt
+PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQEASABIAAD//gA7Q1JFQVRPUjozQTZCM0Q2QzAtN0I2Qy00QzEwLUE2QzYtQzYwQzYwQzYwQzYw/9sAQwAQCwwODAoQDg0OEhEQExgoG... (ضع هنا أول 100 سطر من base64)
+END:VCARD 
