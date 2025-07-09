@@ -51,11 +51,18 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('profile-name').textContent = profiles[id].name;
       document.getElementById('profile-title').textContent = profiles[id].title;
       document.title = profiles[id].name + ' | ' + profiles[id].title;
-    }
-    // Update contact link
-    var contactLink = document.getElementById('contact-link');
-    if (contactLink && vcfFiles[id]) {
-      contactLink.href = vcfFiles[id];
+      var contactLink = document.getElementById('contact-link');
+      if (contactLink && vcfFiles[id]) {
+        contactLink.href = vcfFiles[id];
+      }
+    } else {
+      document.getElementById('profile-name').textContent = '';
+      document.getElementById('profile-title').textContent = '';
+      document.title = 'MedYour';
+      var contactLink = document.getElementById('contact-link');
+      if (contactLink) {
+        contactLink.href = '#';
+      }
     }
   }
 
