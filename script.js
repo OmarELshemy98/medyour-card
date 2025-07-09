@@ -59,12 +59,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // عند تحميل الصفحة، استخدم القيمة الافتراضية
+  function getIdFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+  }
+
   const input = document.getElementById('profile-id');
+  const urlId = getIdFromUrl();
   if (input) {
-    updateProfile(input.value);
+    if (urlId && profiles[urlId]) {
+      input.value = urlId;
+      updateProfile(urlId);
+      updateQRCode(urlId);
+    } else {
+      updateProfile(input.value);
+      updateQRCode(input.value);
+    }
     input.addEventListener('change', function() {
       updateProfile(this.value);
+      updateQRCode(this.value);
+      // Update URL without reloading
+      const newUrl = window.location.pathname + '?id=' + this.value;
+      window.history.replaceState({}, '', newUrl);
     });
   }
 }); 
