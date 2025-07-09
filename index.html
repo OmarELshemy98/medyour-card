@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eng / Ahmed Elkady</title>
+  <title>Medyour</title>
   <link rel="icon" type="image/x-icon" href="image/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <script>
@@ -38,13 +38,19 @@
       <img src="image/medyour-logo.webp" alt="Profile" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-4 border-white shadow-xl object-cover bg-white">
     </div>
 </nav>
+ 
   <!-- Main Content -->
   <main class="flex flex-col items-center flex-1 py-8 sm:py-16 px-2 sm:px-0 pb-24">
+     <!-- Profile ID Selector -->
+  <div style="margin: 20px auto 0 auto; text-align: center; max-width: 320px;">
+    <label for="profile-id" style="color: white; font-weight: bold;">Profile ID:</label>
+    <input type="number" id="profile-id" min="1" max="5" style="padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; margin-left: 8px; width: 60px;">
+  </div>
     <section>
     <!-- Name, Title, Company -->
     <div class="flex flex-col items-center mt-3 sm:mt-5 text-white">
-      <h2 class="font-bold text-2xl sm:text-3xl md:text-[2.5rem] leading-[1.1] mb-2">Ahmed Elkady</h2>
-      <div class="text-base sm:text-lg font-normal mb-0.5 leading-tight">CEO</div>
+      <h2 id="profile-name" class="font-bold text-2xl sm:text-3xl md:text-[2.5rem] leading-[1.1] mb-2">Ahmed Elkady</h2>
+      <div id="profile-title" class="text-base sm:text-lg font-normal mb-0.5 leading-tight">CEO</div>
       <div class="text-base sm:text-lg font-extrabold leading-tight">MedYour</div>
     </div>
     <!-- Icon Row -->
@@ -150,7 +156,7 @@
 <!-- Floating Buttons -->
 
 <div class="fixed bottom-2 right-2 sm:bottom-6 sm:right-6 z-50 mb-2">
-  <a href="AhmedElkady.vcf" download class="flex items-center px-3 py-1 sm:px-5 sm:py-1 rounded-full border-2 border-white/50 ring-1 ring-white/20 text-white text-base sm:text-lg font-semibold tracking-tight hover:bg-white/20 hover:border-blue-400 ">
+  <a id="contact-link" href="#" download class="flex items-center px-3 py-1 sm:px-5 sm:py-1 rounded-full border-2 border-white/50 ring-1 ring-white/20 text-white text-base sm:text-lg font-semibold tracking-tight hover:bg-white/20 hover:border-blue-400 ">
     <span class="text-left w-16 sm:w-20">Add to Contact</span>
     <span class="w-8 h-8 sm:w-10 sm:h-10 bg-white flex items-center justify-center rounded-full shadow-md">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
@@ -162,17 +168,7 @@
 </div>
 <script src="script.js"></script>
 <script>
-  // Hide landing overlay after 5 seconds
-  window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-      const overlay = document.getElementById('landing-overlay');
-      if (overlay) {
-        overlay.style.opacity = '0';
-        overlay.style.pointerEvents = 'none';
-        setTimeout(() => overlay.style.display = 'none', 500); // Wait for fade out
-      }
-    }, 5000);
-  });
+
 </script>
 </body>
 </html> 
